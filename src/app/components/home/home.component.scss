@@ -1,10 +1,6 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   background-color: #0a162d;
-  width: 100vw;
-  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -59,4 +55,22 @@
     fill: white;
     stroke-width: 0;
   }
+}
+
+button {
+  position: relative;
+  display: block;
+  color: white;
+  font-size: 13px;
+  border: 2px solid #32c5f3;
+  padding: 14px 40px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s all ease;
+  background: none;
+}
+
+button:hover {
+  background: #32c5f3;
+  padding: 17px 45px;
 }
