@@ -16,12 +16,12 @@
 
   .icon {
     width: 50%;
-    max-width: 300px;
+    max-width: 230px;
   }
 
   .text {
     width: 100%;
-    max-width: 1000px;
+    max-width: 600px;
 
     text {
       fill: transparent;
@@ -31,13 +31,13 @@
       stroke-dashoffset: -550;
     }
     .deeper {
-      animation: text 4s 1 forwards;
+      animation: text 2.3s 1 forwards;
     }
     .than {
-      animation: text 4s 1 forwards;
+      animation: textthan 2.3s 1 forwards;
     }
     .blue {
-      animation: text 4s 1 forwards;
+      animation: text 2.3s 1 forwards;
     }
   }
 }
@@ -57,6 +57,41 @@
   }
 }
 
+@keyframes textthan {
+  50% {
+    stroke-dashoffset: 0;
+  }
+  75% {
+    fill: transparent;
+    stroke-width: 4px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #32c5f3;
+    stroke-width: 0;
+  }
+}
+
+.line {
+  width: 0px;
+  height: 3px;
+  background: #32c5f3;
+  animation: mymove 1s 1 forwards;
+  position: relative;
+  margin: 15px 30px;
+  bottom: 155px;
+  animation-delay: 1.85s;
+}
+
+@keyframes mymove {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 1500px;
+  }
+}
+
 button {
   position: relative;
   display: block;
@@ -66,11 +101,24 @@ button {
   padding: 14px 40px;
   text-transform: uppercase;
   overflow: hidden;
-  transition: 1s all ease;
+  transition: 0.3s all ease;
   background: none;
+  animation: fadein 0.5s 1 forwards;
+  bottom: 50px;
+  opacity: 0;
+  animation-delay: 1.8s;
 }
 
 button:hover {
   background: #32c5f3;
-  padding: 17px 45px;
+  padding: 16px 42px;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
