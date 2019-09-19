@@ -1,0 +1,43 @@
+.images {
+  display: flex;
+}
+
+.room {
+  flex-grow: 1;
+  width: auto;
+  max-width: 33vw;
+  max-height: 100vh;
+  height: auto;
+  overflow: hidden;
+}
+
+.room img {
+  transition: 0.7s ease;
+}
+
+.room a {
+  transition: 0.7s ease;
+}
+
+.room:hover img {
+  filter: blur(4px) brightness(60%);
+  box-shadow: 0 0 16px cyan;
+}
+
+.room :not(img) {
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  width: 33%;
+  text-align: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.room a {
+  top: 50%;
+}
+
+.room:hover :not(img) {
+  opacity: 1;
+}
