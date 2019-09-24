@@ -12,6 +12,7 @@ import { RoomsComponent } from "./components/rooms/rooms.component";
 import { BoardRoomComponent } from "./components/board-room/board-room.component";
 import { GreenRoomComponent } from "./components/green-room/green-room.component";
 import { TheCaveComponent } from "./components/the-cave/the-cave.component";
+import { AngularDateTimePickerModule } from "angular2-datetimepicker";
 
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
@@ -37,6 +38,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularDateTimePickerModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
