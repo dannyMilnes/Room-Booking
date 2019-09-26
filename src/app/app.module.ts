@@ -13,6 +13,15 @@ import { BoardRoomComponent } from "./components/board-room/board-room.component
 import { GreenRoomComponent } from "./components/green-room/green-room.component";
 import { TheCaveComponent } from "./components/the-cave/the-cave.component";
 import { AngularDateTimePickerModule } from "angular2-datetimepicker";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
+import { ReactiveFormsModule } from "@angular/forms";
+
+import { MatInputModule } from "@angular/material/input";
+import { MatSelectModule } from "@angular/material/select";
+import { MatButtonModule } from "@angular/material/button";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatChipsModule } from "@angular/material/chips";
 
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
@@ -42,7 +51,14 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

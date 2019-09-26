@@ -1,5 +1,11 @@
 import { Component, OnInit } from "@angular/core";
-// import { ClassGetter } from "@angular/compiler/src/output/output_ast";
+import {
+  FormBuilder,
+  FormGroup,
+  FormArray,
+  FormControl,
+  ValidatorFn
+} from "@angular/forms";
 
 @Component({
   selector: "app-green-room",
@@ -7,23 +13,27 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./green-room.component.scss"]
 })
 export class GreenRoomComponent implements OnInit {
-  date: Date = new Date();
-  settings = {
-    bigBanner: true,
-    timePicker: true,
-    format: "dd-MM-yyyy",
-    defaultOpen: true,
-    closeOnSelect: false
-  };
-  dateTime: Date = new Date();
+  form: FormGroup;
+  employeesNames = [];
 
-  onDateSelect(e) {
-    console.log(e);
-    this.dateTime = e;
-    console.log(this.date);
+  constructor(private formBuilder: FormBuilder) {
+    this.form = this.formBuilder.group({
+      employeeName: [""]
+    });
+    this.employeesNames = this.getemployeeName();
+    console.log(this.employeesNames);
   }
 
-  constructor() {}
+  getemployeeName() {
+    return [
+      { id: "1", name: "Scott" },
+      { id: "2", name: "Duncan" },
+      { id: "3", name: "Hayely" },
+      { id: "4", name: "Kasim" },
+      { id: "5", name: "Carl" },
+      { id: "6", name: "Sam" }
+    ];
+  }
 
   ngOnInit() {}
 }

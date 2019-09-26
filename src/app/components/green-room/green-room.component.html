@@ -1,6 +1,12 @@
-<angular2-date-picker
-  (onDateSelect)="onDateSelect($event)"
-  [(ngModel)]="date"
-  [settings]="settings"
->
-</angular2-date-picker>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <label for="employeeName">Select Name</label>
+  <select formControlName="employeeName" id="employeeName">
+    <option
+      *ngFor="let employeeName of employeesNames; let i = index"
+      [value]="employeeName.name"
+    >
+      {{ employeeName.name }}
+    </option>
+  </select>
+  <button>Submit</button>
+</form>
