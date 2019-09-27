@@ -8,5 +8,26 @@
       {{ employeeName.name }}
     </option>
   </select>
+
+  <label for="timeStart">Select Time Start</label>
+  <select formControlName="timeStart" id="timeStart">
+    <option
+      *ngFor="let timeStart of timeStarts; let i = index"
+      [value]="timeStart.timeStart"
+    >
+      {{ timeStart.timeStart }}
+    </option>
+  </select>
+
+  <label for="timeEnd">Select Time End</label>
+  <select formControlName="timeEnd" id="timeEnd">
+    <option
+      *ngFor="let timeEnd of timeEnds; let i = index"
+      [value]="timeEnd.timeEnd"
+    >
+      {{ timeEnd.timeEnd }}
+    </option>
+  </select>
+
   <button>Submit</button>
 </form>
