@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ApiService } from "../../api.service";
 
 @Component({
   selector: "app-bookings",
@@ -6,7 +7,14 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./bookings.component.scss"]
 })
 export class BookingsComponent implements OnInit {
-  constructor() {}
+  articles;
 
-  ngOnInit() {}
+  constructor(private apiService: ApiService) {}
+
+  ngOnInit() {
+    this.apiService.getBookings().subscribe(data => {
+      console.log(data);
+      this.articles = data["articles"];
+    });
+  }
 }

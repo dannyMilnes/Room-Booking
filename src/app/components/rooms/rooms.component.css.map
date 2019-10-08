@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "rooms.component.scss"
+    ],
+    "names": [],
+    "file": "rooms.component.css"
+}

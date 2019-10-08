@@ -22,6 +22,7 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatChipsModule } from "@angular/material/chips";
+import { HttpClientModule } from "@angular/common/http";
 
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
@@ -58,7 +59,8 @@ const appRoutes: Routes = [
     MatSelectModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatChipsModule
+    MatChipsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
