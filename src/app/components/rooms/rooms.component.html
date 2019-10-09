@@ -1,2 +1,15 @@
-<p>rooms works!</p>
-<router-outlet></router-outlet>
+<div class="images">
+  <div class="room">
+    <img src="./assets/img/room1.jpg" alt="room1" />
+    <a [routerLink]="['/board-room']">board room</a>
+  </div>
+  <div class="room">
+    <img src="./assets/img/room2.jpg" alt="room2" />
+    <a [routerLink]="['/green-room']">green room</a>
+  </div>
+  <div class="room">
+    <img src="./assets/img/room3.jpg" alt="room3" />
+    <a [routerLink]="['/the-cave']">the cave</a>
+  </div>
+  <router-outlet></router-outlet>
+</div>
