@@ -7,14 +7,15 @@ import { ApiService } from "../../api.service";
   styleUrls: ["./bookings.component.scss"]
 })
 export class BookingsComponent implements OnInit {
-  articles;
+  bookings: object = [];
 
   constructor(private apiService: ApiService) {}
 
   ngOnInit() {
     this.apiService.getBookings().subscribe(data => {
       console.log(data);
-      this.articles = data["articles"];
+      this.bookings = data;
+      console.log(this.bookings);
     });
   }
 }

@@ -1,9 +1,9 @@
-<div *ngFor="let article of articles">
-  <h2>{{ article.title }}</h2>
+<div *ngFor="let booking of bookings">
+  <h2>{{ booking.id }}</h2>
 
   <p>
-    {{ article.description }}
+    {{ booking.title }}
   </p>
-  <a href="{{ article.url }}">Read full article</a>
+  <a href="{{ booking.author }}">Read full article</a>
 </div>
 <router-outlet></router-outlet>
